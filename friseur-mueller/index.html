@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="de">
+<head>
+<script>document.documentElement.className+=' js'</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#191410">
+<title>Friseur Müller · Oschersleben</title>
+<meta name="description" content="Friseur Müller in Oschersleben — Schnitt, Farbe und Pflege für Damen und Herren. Hornhäuser Str. 11 · Termin: 03949 4325.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kohle:#191410;--kohle-2:#241d17;--kupfer:#b0714a;--kupfer-hell:#d9a071;
+  --papier:#f6f1ea;--papier-2:#efe7dc;--ink:#2b241d;--ink-soft:#7d7266;
+  --line:rgba(80,60,40,.14);--serif:"Fraunces",Georgia,serif;--ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--kohle)}
+body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--papier);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.14}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* ---------- Motion-System (IO-basiert, Safari-sicher) ---------- */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d2{transition-delay:.12s}.js .rv.d3{transition-delay:.24s}.js .rv.d4{transition-delay:.36s}
+@keyframes hin{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hin{animation:hin .95s var(--ease) both}
+.hin.h2{animation-delay:.12s}.hin.h3{animation-delay:.24s}.hin.h4{animation-delay:.36s}.hin.h5{animation-delay:.5s}
+@media(prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .hin,.sch,.mq .tr{animation:none!important}
+}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:80;background:linear-gradient(90deg,var(--kupfer),var(--kupfer-hell))}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(25,20,16,.92);backdrop-filter:blur(10px)}
+header .bar{max-width:1080px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{color:var(--papier)}
+.logo b{font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:.04em}
+.logo span{display:block;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--kupfer-hell)}
+.tel{border:1px solid var(--kupfer);border-radius:999px;padding:9px 18px;color:var(--kupfer-hell);font-size:13px;white-space:nowrap;transition:.3s}
+.tel:hover{background:var(--kupfer);color:#fff}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:92svh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--papier);padding:120px 22px 90px;overflow:clip;background:
+  radial-gradient(90% 60% at 50% 0%,rgba(176,113,74,.16) 0%,rgba(25,20,16,0) 60%),
+  linear-gradient(172deg,#2a221b 0%,var(--kohle) 55%,#120e0b 100%)}
+.hero .ring{position:absolute;width:640px;height:640px;border:1px solid rgba(217,160,113,.14);border-radius:50%;top:-260px;left:50%;transform:translateX(-50%);animation:ringPulse 7s ease-in-out infinite}
+.hero .ring.r2{width:840px;height:840px;top:-360px;animation-delay:1.6s}
+@keyframes ringPulse{0%,100%{opacity:.5;scale:1}50%{opacity:1;scale:1.03}}
+.sch{position:absolute;color:var(--kupfer);opacity:.5;animation:schFloat 7.5s ease-in-out infinite alternate}
+.sch svg{width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
+.sch.s1{width:44px;left:10%;top:24%}.sch.s2{width:32px;right:11%;top:34%;animation-delay:2s;rotate:-24deg}
+.sch.s3{width:28px;left:18%;bottom:20%;animation-delay:3.4s;rotate:14deg}
+@keyframes schFloat{from{translate:0 0;rotate:0deg}to{translate:8px -16px;rotate:8deg}}
+.hero .kicker{font-size:11.5px;letter-spacing:.42em;text-indent:.42em;text-transform:uppercase;color:var(--kupfer-hell);margin-bottom:18px}
+.hero h1{font-size:clamp(36px,7.2vw,72px);margin-bottom:16px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--kupfer-hell)}
+.hero p.lede{max-width:560px;margin:0 auto 26px;color:rgba(246,241,234,.8);font-size:17px}
+.stars{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(217,160,113,.4);border-radius:999px;padding:8px 18px;font-size:13px;color:#ecd3ba;margin-bottom:30px}
+.stars b{color:var(--kupfer-hell);letter-spacing:2px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:999px;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s,box-shadow .3s}
+.btn:active{transform:scale(.97)}
+.btn.k{background:var(--kupfer);color:#fff;box-shadow:0 18px 36px -18px rgba(176,113,74,.7)}
+.btn.k:hover{background:#c07f54;transform:translateY(-2px)}
+.btn.ghost{border:1px solid rgba(246,241,234,.35);color:var(--papier)}
+.btn.ghost:hover{border-color:var(--kupfer-hell);color:var(--kupfer-hell)}
+
+/* ---------- Marquee ---------- */
+.mq{background:var(--kohle);color:rgba(246,241,234,.75);overflow:clip;border-top:1px solid rgba(217,160,113,.18);border-bottom:1px solid rgba(217,160,113,.18)}
+.mq .tr{display:flex;width:max-content;animation:mqMove 26s linear infinite}
+.mq:hover .tr{animation-play-state:paused}
+.mq span{display:flex;align-items:center;white-space:nowrap;font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:.06em;padding:13px 0}
+.mq em{color:var(--kupfer);font-style:normal;margin:0 18px}
+@keyframes mqMove{to{transform:translateX(-50%)}}
+
+section{padding:clamp(56px,8vw,104px) 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.sec-num{font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--kupfer);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(28px,4.4vw,46px);margin-bottom:12px}
+.sec-head .sub{color:var(--ink-soft)}
+
+/* ---------- Leistungen ---------- */
+.leist .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.leist .grid{grid-template-columns:1fr}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;overflow:clip;transition:transform .45s var(--ease),box-shadow .45s}
+.card:hover{transform:translateY(-6px);box-shadow:0 28px 50px -30px rgba(60,40,25,.45)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 42%,rgba(217,160,113,.22) 50%,transparent 58%);transform:translateX(-130%);transition:transform 1s var(--ease);pointer-events:none}
+.card:hover::before{transform:translateX(130%)}
+.card .ic{width:48px;height:48px;color:var(--kupfer);margin-bottom:16px}
+.card .ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:22px;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:14.5px}
+
+/* ---------- Preise ---------- */
+.preise{background:var(--kohle);color:var(--papier)}
+.preise .menu{max-width:720px;margin:0 auto;background:var(--kohle-2);border:1px solid rgba(217,160,113,.25);border-radius:20px;padding:clamp(28px,5vw,48px);box-shadow:0 40px 80px -50px rgba(0,0,0,.8)}
+.preise h2{text-align:center;font-size:clamp(27px,4vw,42px);margin-bottom:6px}
+.preise .mnote{text-align:center;color:var(--kupfer-hell);font-size:12px;letter-spacing:.26em;text-transform:uppercase;margin-bottom:30px}
+.pgru h3{font-size:20px;color:var(--kupfer-hell);margin:26px 0 12px;display:flex;align-items:center;gap:14px}
+.pgru h3::after{content:"";flex:1;height:1px;background:rgba(217,160,113,.25)}
+.prow{display:flex;align-items:baseline;gap:8px;padding:9px 0;font-size:clamp(14.5px,2.2vw,16px)}
+.prow .dots{flex:1;border-bottom:1px dotted rgba(246,241,234,.3);transform:translateY(-4px)}
+.prow .pr{color:var(--kupfer-hell);font-variant-numeric:tabular-nums;white-space:nowrap}
+.preise .fuss{text-align:center;color:rgba(246,241,234,.55);font-size:12.5px;margin-top:26px}
+
+/* ---------- Zeiten ---------- */
+.zeiten{background:var(--papier-2)}
+.zeiten .inner{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(26px,5vw,44px);box-shadow:0 30px 60px -42px rgba(60,40,25,.4)}
+.zrow{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:14px 6px;border-bottom:1px dashed var(--line);font-size:clamp(15px,2.5vw,17.5px)}
+.zrow:last-of-type{border-bottom:0}
+.zrow .d{font-weight:600}
+.zrow .h{color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.zrow.today{background:linear-gradient(90deg,rgba(176,113,74,.12),transparent);border-radius:10px;padding-left:14px;padding-right:14px}
+.zrow.today .d::after{content:"· Heute";color:var(--kupfer);font-size:12px;margin-left:8px}
+.zeiten .note{text-align:center;color:var(--ink-soft);font-size:13.5px;margin-top:18px}
+
+/* ---------- Bewertungen ---------- */
+.bew{background:var(--papier);text-align:center}
+.bew .big{font-family:var(--serif);font-size:clamp(52px,9vw,84px);color:var(--kupfer);line-height:1}
+.bew .lbl{color:var(--ink-soft);margin-top:6px}
+.bew .row{display:flex;justify-content:center;gap:clamp(30px,7vw,70px);flex-wrap:wrap}
+
+/* ---------- Karte & Kontakt ---------- */
+.kontakt{background:var(--kohle);color:var(--papier)}
+.kontakt .kgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,44px);align-items:center}
+@media(max-width:840px){.kontakt .kgrid{grid-template-columns:1fr}}
+.kontakt h2{font-size:clamp(27px,4.2vw,44px);margin-bottom:12px}
+.kontakt p{color:rgba(246,241,234,.7)}
+.kontakt .adr{font-family:var(--serif);font-size:clamp(18px,2.4vw,22px);color:var(--kupfer-hell);margin:18px 0 24px}
+.map{position:relative;height:380px;border-radius:20px;overflow:clip;border:1px solid rgba(217,160,113,.3);background:var(--kohle-2)}
+@media(max-width:840px){.map{height:320px}}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.04)}
+.map-pre{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:24px;background:
+  radial-gradient(70% 60% at 50% 40%,rgba(176,113,74,.16),transparent 70%)}
+.map-pre .pin{width:52px;height:52px;color:var(--kupfer-hell);animation:pinDrop 2.6s ease-in-out infinite}
+.map-pre .pin svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pinDrop{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.map-pre b{font-family:var(--serif);font-size:19px}
+.map-pre span{color:rgba(246,241,234,.65);font-size:14px}
+.map-pre button{margin-top:12px;cursor:pointer;font:inherit;border:0;background:var(--kupfer);color:#fff;border-radius:999px;padding:13px 26px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:.3s}
+.map-pre button:hover{background:#c07f54}
+.map-pre small{color:rgba(246,241,234,.4);font-size:11px;margin-top:8px}
+
+footer{background:#110d0a;color:rgba(246,241,234,.5);padding:24px 0;font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{border-bottom:1px dotted rgba(246,241,234,.3)}
+.demo-badge{position:fixed;left:12px;bottom:74px;z-index:60;background:rgba(25,20,16,.92);color:var(--kupfer-hell);border:1px solid rgba(217,160,113,.35);border-radius:8px;padding:7px 12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+@media(min-width:750px){.demo-badge{bottom:14px}}
+
+.satc{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;background:rgba(25,20,16,.96);backdrop-filter:blur(8px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;align-items:center}
+.satc span{flex:1;color:rgba(246,241,234,.85);font-size:13px}
+.satc a{background:var(--kupfer);color:#fff;border-radius:9px;padding:12px 20px;font-weight:700;font-size:13px;white-space:nowrap}
+@media(max-width:749px){.satc{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="prog" aria-hidden="true"></div>
+<div class="demo-badge">Design-Entwurf · Demo</div>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="#top"><b>Friseur Müller</b><span>Oschersleben · seit Generationen</span></a>
+    <a class="tel" href="tel:039494325">✆ 03949 4325</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Willkommen">
+  <div class="ring" aria-hidden="true"></div><div class="ring r2" aria-hidden="true"></div>
+  <div class="sch s1" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="12" cy="32" r="5"/><circle cx="12" cy="12" r="5"/><path d="M16 15 L38 36 M16 29 L38 8"/></svg></div>
+  <div class="sch s2" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="12" cy="32" r="5"/><circle cx="12" cy="12" r="5"/><path d="M16 15 L38 36 M16 29 L38 8"/></svg></div>
+  <div class="sch s3" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="12" cy="32" r="5"/><circle cx="12" cy="12" r="5"/><path d="M16 15 L38 36 M16 29 L38 8"/></svg></div>
+  <div>
+    <p class="kicker hin">Friseur in Oschersleben</p>
+    <h1 class="hin h2">Gutes Haar ist<br><em>kein Zufall.</em></h1>
+    <p class="lede hin h3">Schnitt, Farbe und Pflege für Damen und Herren — mit Handwerk, Erfahrung und einem ehrlichen Blick dafür, was Ihnen steht.</p>
+    <span class="stars hin h4"><b>★★★★★</b> 4,6 von 5 · 94 Google-Bewertungen</span>
+    <div class="cta-row hin h5">
+      <a class="btn k" href="tel:039494325">Termin vereinbaren</a>
+      <a class="btn ghost" href="#preise">Preise ansehen</a>
+    </div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="tr">
+  <span>Schnitt <em>✂</em> Farbe <em>✂</em> Strähnen <em>✂</em> Pflege <em>✂</em> Damen <em>✂</em> Herren <em>✂</em> Beratung <em>✂</em>&nbsp;</span>
+  <span>Schnitt <em>✂</em> Farbe <em>✂</em> Strähnen <em>✂</em> Pflege <em>✂</em> Damen <em>✂</em> Herren <em>✂</em> Beratung <em>✂</em>&nbsp;</span>
+</div></div>
+
+<section class="leist" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">01 · Unser Handwerk</span>
+      <h2>Was wir am besten können</h2>
+      <p class="sub">Kein Schema F — wir schauen, was zu Ihrem Haar, Ihrem Alltag und Ihrem Typ passt.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 48 48"><circle cx="14" cy="34" r="5"/><circle cx="14" cy="14" r="5"/><path d="M18 17 L40 38 M18 31 L40 10"/></svg></div>
+        <h3>Schnitt &amp; Styling</h3>
+        <p>Vom klassischen Schnitt bis zum neuen Look — präzise geschnitten und alltagstauglich gestylt.</p>
+      </div>
+      <div class="card rv d2">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M16 6 h10 v10 l8 22 a5 5 0 0 1 -5 6 H15 a5 5 0 0 1 -5 -6 l8 -22 z" transform="rotate(14 24 24)"/><path d="M14 32 h16" transform="rotate(14 24 24)"/></svg></div>
+        <h3>Farbe &amp; Strähnen</h3>
+        <p>Natürliche Töne, Ansatz oder Foliensträhnen — Farbe, die zu Ihrem Hautton passt und lange schön bleibt.</p>
+      </div>
+      <div class="card rv d3">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M24 8 c6 8 10 13 10 19 a10 10 0 0 1 -20 0 c0 -6 4 -11 10 -19 z"/><path d="M24 22 c2 3 4 5 4 8 a4 4 0 0 1 -8 0 c0 -3 2 -5 4 -8 z"/></svg></div>
+        <h3>Pflege &amp; Kur</h3>
+        <p>Aufbau, Glanz und Kopfhautpflege — damit Ihr Haar nicht nur heute gut aussieht, sondern gesund bleibt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="preise" id="preise">
+  <div class="wrap">
+    <div class="menu rv">
+      <h2>Unsere Preise</h2>
+      <p class="mnote">Musterpreise · Demo</p>
+      <div class="pgru">
+        <h3>Damen</h3>
+        <div class="prow"><span>Waschen, Schneiden, Föhnen</span><span class="dots"></span><span class="pr">ab 34 €</span></div>
+        <div class="prow"><span>Farbe / Ansatz</span><span class="dots"></span><span class="pr">ab 45 €</span></div>
+        <div class="prow"><span>Strähnen (Folie)</span><span class="dots"></span><span class="pr">ab 55 €</span></div>
+      </div>
+      <div class="pgru">
+        <h3>Herren</h3>
+        <div class="prow"><span>Waschen, Schneiden, Stylen</span><span class="dots"></span><span class="pr">ab 22 €</span></div>
+        <div class="prow"><span>Maschinenschnitt</span><span class="dots"></span><span class="pr">ab 15 €</span></div>
+        <div class="prow"><span>Bart in Form</span><span class="dots"></span><span class="pr">ab 12 €</span></div>
+      </div>
+      <p class="fuss">Beispielpreise für diesen Entwurf — Ihre echten Preise übernehmen wir natürlich exakt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bew">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">02 · Das sagen Kunden</span>
+      <h2>Oschersleben vertraut uns</h2>
+    </div>
+    <div class="row">
+      <div class="rv"><div class="big">4,6<span style="font-size:.45em">★</span></div><div class="lbl">von 5 Sternen bei Google</div></div>
+      <div class="rv d2"><div class="big"><span data-count="94">0</span></div><div class="lbl">Google-Bewertungen</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="zeiten" id="zeiten">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">03 · Wann Sie uns erreichen</span>
+      <h2>Öffnungszeiten</h2>
+    </div>
+    <div class="inner rv d2">
+      <div class="zrow" data-d="2"><span class="d">Dienstag</span><span class="h">08:30 – 18:00</span></div>
+      <div class="zrow" data-d="3"><span class="d">Mittwoch</span><span class="h">08:30 – 18:00</span></div>
+      <div class="zrow" data-d="4"><span class="d">Donnerstag</span><span class="h">08:30 – 18:00</span></div>
+      <div class="zrow" data-d="5"><span class="d">Freitag</span><span class="h">08:30 – 18:00</span></div>
+      <div class="zrow" data-d="6"><span class="d">Samstag</span><span class="h">08:00 – 12:00</span></div>
+      <div class="zrow" data-d="1" data-d2="0"><span class="d">Montag &amp; Sonntag</span><span class="h">geschlossen</span></div>
+      <p class="note">Termine am besten telefonisch: 03949 4325</p>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="kgrid">
+      <div>
+        <span class="sec-num" style="color:var(--kupfer-hell)">04 · So finden Sie uns</span>
+        <h2 class="rv">Mitten in Oschersleben</h2>
+        <p class="rv d2">Kommen Sie vorbei oder rufen Sie kurz durch — wir finden einen Termin, der in Ihren Tag passt.</p>
+        <p class="adr rv d2">Hornhäuser Str. 11 · 39387 Oschersleben</p>
+        <div class="cta-row rv d3" style="justify-content:flex-start">
+          <a class="btn k" href="tel:039494325">✆ 03949 4325</a>
+        </div>
+      </div>
+      <div class="map rv d2" data-q="Hornh%C3%A4user%20Stra%C3%9Fe%2011%2C%2039387%20Oschersleben">
+        <div class="map-pre">
+          <div class="pin"><svg viewBox="0 0 48 48"><path d="M24 4 a14 14 0 0 1 14 14 c0 10 -14 26 -14 26 S10 28 10 18 A14 14 0 0 1 24 4 z"/><circle cx="24" cy="18" r="5"/></svg></div>
+          <b>Hornhäuser Str. 11</b>
+          <span>39387 Oschersleben</span>
+          <button type="button" onclick="ldMap(this)">Karte anzeigen</button>
+          <small>Beim Laden der Karte werden Daten an Google übertragen.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Friseur Müller · Oschersleben</span>
+    <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a> <em style="opacity:.6">(werden beim Livegang eingerichtet)</em></span>
+  </div>
+</footer>
+
+<div class="satc" aria-hidden="true">
+  <span><b>Friseur Müller</b> · Termin heute?</span>
+  <a href="tel:039494325">Jetzt anrufen</a>
+</div>
+
+<script>
+(function(){
+  var d=String(new Date().getDay());
+  document.querySelectorAll('.zrow').forEach(function(r){
+    if(r.dataset.d===d||r.dataset.d2===d) r.classList.add('today');
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  });},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;cio.unobserve(el);
+      var t=+el.dataset.count,s=performance.now();
+      (function tick(n){var p=Math.min(1,(n-s)/1300);
+        el.textContent=Math.round(t*(1-Math.pow(1-p,3)));
+        if(p<1)requestAnimationFrame(tick);})(s);
+    });},{threshold:.6});
+    cio.observe(el);
+  });
+  var bar=document.querySelector('.prog'),h=document.documentElement;
+  addEventListener('scroll',function(){bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+})();
+function ldMap(btn){
+  var m=btn.closest('.map');
+  m.innerHTML='<iframe title="Karte" src="https://www.google.com/maps?q='+m.dataset.q+'&hl=de&z=16&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>';
+}
+</script>
+</body>
+  </html>
