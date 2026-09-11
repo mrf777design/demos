@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="de">
+<head>
+<script>document.documentElement.className+=' js'</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#101b2b">
+<title>Fahrschule Pierschalla · Oschersleben</title>
+<meta name="description" content="Fahrschule Pierschalla in Oschersleben — Theorie und Praxis mit erfahrenen Fahrlehrern. Nickelkulk 1, Tel. 03949 3077.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nacht:#101b2b;--nacht-2:#182740;--stahl:#223350;--hell:#f4f6f9;--hell-2:#e9edf3;
+  --ink:#1c2735;--ink-soft:#66738a;--strom:#f5c518;--line:rgba(30,50,80,.14);
+  --disp:"Space Grotesk","Helvetica Neue",sans-serif;--ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--nacht)}
+body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--hell);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.12;letter-spacing:-.015em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d2{transition-delay:.12s}.js .rv.d3{transition-delay:.24s}.js .rv.d4{transition-delay:.36s}
+@keyframes hin{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hin{animation:hin .9s var(--ease) both}
+.hin.h2{animation-delay:.12s}.hin.h3{animation-delay:.24s}.hin.h4{animation-delay:.36s}.hin.h5{animation-delay:.5s}
+@media(prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .hin,.blitz,.wire path,.mq .tr{animation:none!important}
+}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:80;background:var(--strom)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(16,27,43,.93);backdrop-filter:blur(10px)}
+header .bar{max-width:1080px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--hell)}
+.logo .bolt{width:30px;height:30px;background:var(--strom);border-radius:7px;display:grid;place-items:center;color:var(--nacht);animation:boltPulse 3.2s ease-in-out infinite}
+@keyframes boltPulse{0%,100%{box-shadow:0 0 0 0 rgba(245,197,24,.4)}50%{box-shadow:0 0 0 7px rgba(245,197,24,0)}}
+.logo .bolt svg{width:16px;height:16px;fill:currentColor}
+.logo b{font-family:var(--disp);font-size:16px}
+.logo span{display:block;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:#8fa3c4}
+.tel{border:1px solid var(--strom);border-radius:999px;padding:9px 18px;color:var(--strom);font-size:13px;white-space:nowrap;transition:.3s}
+.tel:hover{background:var(--strom);color:var(--nacht)}
+.hero{position:relative;min-height:90svh;display:flex;align-items:center;color:var(--hell);padding:120px 0 90px;overflow:clip;background:
+  radial-gradient(90% 70% at 80% 10%,rgba(245,197,24,.13) 0%,rgba(16,27,43,0) 55%),
+  linear-gradient(168deg,#16233a 0%,var(--nacht) 60%,#0b1420 100%)}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(143,163,196,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(143,163,196,.07) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(80% 70% at 50% 40%,#000 30%,transparent 100%)}
+.blitz{position:absolute;width:2px;background:linear-gradient(180deg,transparent,var(--strom),transparent);opacity:0;animation:blitzDrop 5.5s linear infinite}
+.blitz.b1{left:14%;top:6%;height:130px}.blitz.b2{right:18%;top:16%;height:90px;animation-delay:2.6s}
+@keyframes blitzDrop{0%,86%{opacity:0;transform:translateY(-40px)}90%{opacity:.9}96%{opacity:.2}100%{opacity:0;transform:translateY(70px)}}
+.wire{position:absolute;right:-40px;bottom:0;width:min(560px,70vw);opacity:.6;pointer-events:none}
+.wire path{fill:none;stroke:var(--strom);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:900;stroke-dashoffset:900;animation:wireDraw 4.5s var(--ease) .6s forwards}
+.wire circle{fill:var(--strom);opacity:0;animation:dotOn .5s ease 4.6s forwards}
+@keyframes wireDraw{to{stroke-dashoffset:0}}
+@keyframes dotOn{to{opacity:1}}
+.hero .in{position:relative;max-width:640px}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--strom)}
+.hero .kicker::before{content:"";width:26px;height:2px;background:var(--strom)}
+.hero h1{font-size:clamp(34px,6.6vw,62px);margin:16px 0}
+.hero h1 .y{color:var(--strom)}
+.hero p.lede{color:rgba(244,246,249,.78);font-size:17px;margin-bottom:30px;max-width:520px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:10px;font-family:var(--disp);font-size:13.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s,box-shadow .3s}
+.btn:active{transform:scale(.97)}
+.btn.y{background:var(--strom);color:var(--nacht);box-shadow:0 18px 36px -18px rgba(245,197,24,.6)}
+.btn.y:hover{background:#ffd23f;transform:translateY(-2px)}
+.btn.ghost{border:1px solid rgba(244,246,249,.35);color:var(--hell)}
+.btn.ghost:hover{border-color:var(--strom);color:var(--strom)}
+.hero .meta{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-size:13px;color:#8fa3c4}
+.hero .meta b{display:block;color:var(--hell);font-size:15px;font-family:var(--disp)}
+.mq{background:var(--nacht);color:rgba(244,246,249,.7);overflow:clip;border-top:1px solid rgba(245,197,24,.2);border-bottom:1px solid rgba(245,197,24,.2)}
+.mq .tr{display:flex;width:max-content;animation:mqMove 24s linear infinite}
+.mq:hover .tr{animation-play-state:paused}
+.mq span{display:flex;align-items:center;white-space:nowrap;font-family:var(--disp);font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:12px 0}
+.mq em{color:var(--strom);font-style:normal;margin:0 18px}
+@keyframes mqMove{to{transform:translateX(-50%)}}
+section{padding:clamp(56px,8vw,104px) 0}
+.sec-head{max-width:680px;margin:0 auto 44px;text-align:center}
+.sec-num{font-family:var(--disp);font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(26px,4vw,42px);margin-bottom:12px}
+.sec-head .sub{color:var(--ink-soft)}
+.leist .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:800px){.leist .grid{grid-template-columns:1fr}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 28px;overflow:clip;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s}
+.card:hover{transform:translateY(-5px);box-shadow:0 26px 46px -30px rgba(20,35,60,.4);border-color:rgba(245,197,24,.5)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 42%,rgba(245,197,24,.14) 50%,transparent 58%);transform:translateX(-130%);transition:transform .9s var(--ease);pointer-events:none}
+.card:hover::before{transform:translateX(130%)}
+.card .ic{width:46px;height:46px;border-radius:11px;background:var(--nacht);color:var(--strom);display:grid;place-items:center;margin-bottom:16px;transition:transform .4s var(--ease)}
+.card:hover .ic{transform:rotate(-6deg) scale(1.06)}
+.card .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:19.5px;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:14.5px}
+.warum{background:var(--nacht);color:var(--hell)}
+.warum .row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:0 auto}
+@media(max-width:800px){.warum .row{grid-template-columns:1fr}}
+.witem{border:1px solid rgba(143,163,196,.22);border-radius:14px;padding:28px 24px;text-align:center;transition:border-color .4s,transform .4s var(--ease)}
+.witem:hover{border-color:rgba(245,197,24,.5);transform:translateY(-4px)}
+.witem .big{font-family:var(--disp);font-size:clamp(24px,3.6vw,32px);font-weight:700;color:var(--strom);margin-bottom:6px}
+.witem p{color:#a9b8d2;font-size:14px}
+.kontakt{background:var(--hell-2)}
+.kontakt .kgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,44px);align-items:center}
+@media(max-width:840px){.kontakt .kgrid{grid-template-columns:1fr}}
+.kontakt h2{font-size:clamp(27px,4.2vw,44px);margin-bottom:12px}
+.kontakt p{color:var(--ink-soft)}
+.kontakt .adr{font-family:var(--disp);font-size:clamp(17px,2.4vw,21px);font-weight:700;margin:18px 0 24px}
+.map{position:relative;height:380px;border-radius:18px;overflow:clip;border:1px solid rgba(30,50,80,.2);background:var(--nacht-2)}
+@media(max-width:840px){.map{height:320px}}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.05)}
+.map-pre{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:24px;color:var(--hell);background:radial-gradient(70% 60% at 50% 40%,rgba(245,197,24,.12),transparent 70%)}
+.map-pre .pin{width:52px;height:52px;color:var(--strom);animation:pinDrop 2.6s ease-in-out infinite}
+.map-pre .pin svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pinDrop{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.map-pre b{font-family:var(--disp);font-size:19px}
+.map-pre span{color:#a9b8d2;font-size:14px}
+.map-pre button{margin-top:12px;cursor:pointer;font-family:var(--disp);border:0;background:var(--strom);color:var(--nacht);font-weight:700;border-radius:10px;padding:13px 26px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;transition:.3s}
+.map-pre button:hover{background:#ffd23f}
+.map-pre small{color:#7e90ad;font-size:11px;margin-top:8px}
+footer{background:var(--nacht);color:#7e90ad;padding:24px 0;font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{border-bottom:1px dotted rgba(143,163,196,.4)}
+.demo-badge{position:fixed;left:12px;bottom:74px;z-index:60;background:rgba(16,27,43,.92);color:var(--strom);border:1px solid rgba(245,197,24,.35);border-radius:8px;padding:7px 12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+@media(min-width:750px){.demo-badge{bottom:14px}}
+.satc{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;background:rgba(16,27,43,.96);backdrop-filter:blur(8px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;align-items:center}
+.satc span{flex:1;color:rgba(244,246,249,.85);font-size:13px}
+.satc a{background:var(--strom);color:var(--nacht);border-radius:9px;padding:12px 20px;font-family:var(--disp);font-weight:700;font-size:13px;white-space:nowrap}
+@media(max-width:749px){.satc{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="prog" aria-hidden="true"></div>
+<div class="demo-badge">Design-Entwurf · Demo</div>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="#top">
+      <span class="bolt"><svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.6"/><path d="M3.5 12 h6 M14.5 12 h6 M12 14.6 v5.9"/></svg></span>
+      <span><b>Fahrschule Pierschalla</b><span>Oschersleben</span></span>
+    </a>
+    <a class="tel" href="tel:039493077">✆ 03949 3077</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Willkommen">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="blitz b1" aria-hidden="true"></div>
+  <div class="blitz b2" aria-hidden="true"></div>
+  <svg class="wire" viewBox="0 0 560 300" aria-hidden="true">
+    <path d="M0 260 H120 V180 H230 V240 H330 V140 H430 V210 H560"/>
+    <circle cx="120" cy="220" r="4"/><circle cx="330" cy="190" r="4"/><circle cx="430" cy="175" r="4"/>
+  </svg>
+  <div class="wrap"><div class="in">
+    <span class="kicker hin">Fahrschule in Oschersleben</span>
+    <h1 class="hin h2">Der Führerschein beginnt<br><span class="y">mit dem richtigen Lehrer.</span></h1>
+    <p class="lede hin h3">Theorie und Praxis bei erfahrenen Fahrlehrern — persönlich, geduldig und mitten in Oschersleben.</p>
+    <div class="cta-row hin h4">
+      <a class="btn y" href="tel:039493077">Jetzt anrufen</a>
+      <a class="btn ghost" href="#leistungen">Leistungen ansehen</a>
+    </div>
+    <div class="meta hin h5">
+      <span><b>Persönlich</b>Inhaber Mike Pierschalla</span>
+      <span><b>Zentral</b>Nickelkulk 1, Oschersleben</span>
+      <span><b>Büro</b>Di–Do 14–17 Uhr</span>
+    </div>
+  </div></div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="tr">
+  <span>Theorie <em>➜</em> Praxis <em>➜</em> Prüfung <em>➜</em> Führerschein <em>➜</em> Fahrschule Pierschalla <em>➜</em>&nbsp;</span>
+  <span>Theorie <em>➜</em> Praxis <em>➜</em> Prüfung <em>➜</em> Führerschein <em>➜</em> Fahrschule Pierschalla <em>➜</em>&nbsp;</span>
+</div></div>
+
+<section class="leist" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">01 / Ausbildung</span>
+      <h2>So kommen Sie zum Führerschein</h2>
+      <p class="sub">Von der ersten Theoriestunde bis zur bestandenen Prüfung — Schritt für Schritt, in Ihrem Tempo.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20 V8 l8 -5 8 5 v12"/><path d="M10 20 v-6 h4 v6"/></svg></div>
+        <h3>Theorieunterricht</h3>
+        <p>Verständlich erklärt statt trocken auswendig gelernt — bis der Stoff wirklich sitzt.</p>
+      </div>
+      <div class="card rv d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 3 L5 14 h5 l-1 7 9 -11 h-5 z"/></svg></div>
+        <h3>Praxisstunden</h3>
+        <p>Fahren lernen mit Ruhe und System — mit erfahrenen Fahrlehrern an Ihrer Seite.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9 h.01 M12 9 h.01 M16 9 h.01 M8 13 h5"/></svg></div>
+        <h3>Prüfungsvorbereitung</h3>
+        <p>Gezielt das üben, was drankommt — damit Sie sicher in die Prüfung gehen.</p>
+      </div>
+      <div class="card rv d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8 v4 l3 2"/></svg></div>
+        <h3>Persönliche Beratung</h3>
+        <p>Welche Klasse, welche Kosten, wie lange? Kommen Sie im Büro vorbei — wir beraten ehrlich.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="warum">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num" style="color:#8fa3c4">02 / Warum Pierschalla</span>
+      <h2 style="color:var(--hell)">Fahren lernen in Oschersleben</h2>
+    </div>
+    <div class="row">
+      <div class="witem rv"><div class="big">Erfahrung</div><p>Fahrschüler aus Oschersleben lernen bei uns mit Geduld und Routine.</p></div>
+      <div class="witem rv d2"><div class="big">Kurze Wege</div><p>Büro und Treffpunkt mitten in Oschersleben — am Nickelkulk 1.</p></div>
+      <div class="witem rv d3"><div class="big">Klare Worte</div><p>Ehrliche Beratung und nachvollziehbare Angebote statt Überraschungen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="kgrid">
+      <div>
+        <span class="sec-num">03 / Kontakt</span>
+        <h2 class="rv">Starten Sie Ihre Ausbildung</h2>
+        <p class="rv d2">Rufen Sie an oder kommen Sie im Büro vorbei — Di bis Do von 14 bis 17 Uhr.</p>
+        <p class="adr rv d2">Nickelkulk 1 · 39387 Oschersleben</p>
+        <div class="cta-row rv d3">
+          <a class="btn y" href="tel:039493077">✆ 03949 3077</a>
+        </div>
+      </div>
+      <div class="map rv d2" data-q="Nickelkulk%201%2C%2039387%20Oschersleben">
+        <div class="map-pre">
+          <div class="pin"><svg viewBox="0 0 48 48"><path d="M24 4 a14 14 0 0 1 14 14 c0 10 -14 26 -14 26 S10 28 10 18 A14 14 0 0 1 24 4 z"/><circle cx="24" cy="18" r="5"/></svg></div>
+          <b>Nickelkulk 1</b>
+          <span>39387 Oschersleben</span>
+          <button type="button" onclick="ldMap(this)">Karte anzeigen</button>
+          <small>Beim Laden der Karte werden Daten an Google übertragen.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Fahrschule Pierschalla · Oschersleben</span>
+    <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a> <em style="opacity:.6">(werden beim Livegang eingerichtet)</em></span>
+  </div>
+</footer>
+
+<div class="satc" aria-hidden="true">
+  <span><b>Fahrschule Pierschalla</b> · Oschersleben</span>
+  <a href="tel:039493077">Jetzt anrufen</a>
+</div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  });},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  var bar=document.querySelector('.prog'),h=document.documentElement;
+  addEventListener('scroll',function(){bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+})();
+function ldMap(btn){
+  var m=btn.closest('.map');
+  m.innerHTML='<iframe title="Karte" src="https://www.google.com/maps?q='+m.dataset.q+'&hl=de&z=16&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>';
+}
+</script>
+</body>
+</html>
