@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="de">
+<head>
+<script>document.documentElement.className+=' js'</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#16323b">
+<title>Physiotherapie &amp; Osteopathie Edeltraud Salomon · Oschersleben</title>
+<meta name="description" content="Praxis für Physiotherapie und Osteopathie Edeltraud Salomon in Oschersleben — Breitscheidstraße 51, Tel. 03949 2517.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --grün:#16323b;--grün-2:#204652;--blatt:#5b96a5;--creme:#f6f8f8;--creme-2:#e9eff0;
+  --ink:#1e2b30;--ink-soft:#5f7076;--sonne:#e0a45c;--line:rgba(30,60,70,.14);
+  --serif:"Lora",Georgia,serif;--ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--grün)}
+body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--creme);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.16}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* ---------- Motion-System ---------- */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d2{transition-delay:.12s}.js .rv.d3{transition-delay:.24s}.js .rv.d4{transition-delay:.36s}
+@keyframes hin{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hin{animation:hin 1s var(--ease) both}
+.hin.h2{animation-delay:.14s}.hin.h3{animation-delay:.28s}.hin.h4{animation-delay:.42s}.hin.h5{animation-delay:.56s}
+@media(prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .hin,.leaf,.petal,.mq .tr{animation:none!important}
+}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:80;background:linear-gradient(90deg,var(--blatt),var(--sonne))}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(22,50,59,.93);backdrop-filter:blur(10px)}
+header .bar{max-width:1080px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{color:var(--creme)}
+.logo b{font-family:var(--serif);font-weight:600;font-size:18px}
+.logo span{display:block;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#b7cfd6}
+.tel{border:1px solid var(--sonne);border-radius:999px;padding:9px 18px;color:var(--sonne);font-size:13px;white-space:nowrap;transition:.3s}
+.tel:hover{background:var(--sonne);color:var(--grün)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:90svh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--creme);padding:120px 22px 80px;overflow:clip;background:
+  radial-gradient(120% 90% at 50% 110%,rgba(91,150,165,.5) 0%,rgba(22,50,59,0) 55%),
+  linear-gradient(175deg,#1c3e49 0%,var(--grün) 60%,#0f242b 100%)}
+.leaf{display:none;position:absolute;color:var(--blatt);opacity:.5;animation:leafSway 7s ease-in-out infinite alternate}
+.leaf svg{width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
+.leaf.l1{width:46px;left:8%;top:22%}.leaf.l2{width:34px;right:9%;top:32%;animation-delay:1.6s;rotate:24deg}
+.leaf.l3{width:30px;left:16%;bottom:20%;animation-delay:3s;rotate:-18deg}
+@keyframes leafSway{from{translate:0 0;rotate:0deg}to{translate:6px -14px;rotate:6deg}}
+.petal{position:absolute;top:-30px;width:10px;height:10px;border-radius:60% 40% 60% 40%;background:rgba(183,207,214,.5);animation:petalFall linear infinite}
+.petal.p1{left:16%;animation-duration:11s}
+.petal.p2{left:34%;animation-duration:14s;animation-delay:3s;background:rgba(224,164,92,.4)}
+.petal.p3{left:58%;animation-duration:12s;animation-delay:6s}
+.petal.p4{left:78%;animation-duration:15s;animation-delay:1.5s;background:rgba(224,164,92,.3)}
+.petal.p5{left:90%;animation-duration:13s;animation-delay:8s}
+@keyframes petalFall{
+  0%{transform:translateY(-4vh) translateX(0) rotate(0deg);opacity:0}
+  8%{opacity:1}
+  100%{transform:translateY(96vh) translateX(-60px) rotate(340deg);opacity:0}
+}
+.hero .kicker{font-size:11.5px;letter-spacing:.4em;text-indent:.4em;text-transform:uppercase;color:#b7cfd6;margin-bottom:18px}
+.hero h1{font-size:clamp(35px,7vw,68px);margin-bottom:16px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--sonne)}
+.hero p.lede{max-width:580px;margin:0 auto 24px;color:rgba(246,248,248,.82);font-size:17px}
+.stars{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(224,164,92,.4);border-radius:999px;padding:8px 18px;font-size:13px;color:#f3ddc2;margin-bottom:30px}
+.stars b{color:var(--sonne);letter-spacing:2px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:999px;font-size:13.5px;letter-spacing:.09em;text-transform:uppercase;transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s,box-shadow .3s}
+.btn:active{transform:scale(.97)}
+.btn.g{background:var(--sonne);color:var(--grün);font-weight:700;box-shadow:0 18px 36px -18px rgba(224,164,92,.6)}
+.btn.g:hover{background:#ecb878;transform:translateY(-2px)}
+.btn.ghost{border:1px solid rgba(246,248,248,.4);color:var(--creme)}
+.btn.ghost:hover{border-color:var(--sonne);color:var(--sonne)}
+
+/* ---------- Marquee ---------- */
+.mq{background:var(--grün);color:rgba(246,248,248,.75);overflow:clip;border-top:1px solid rgba(224,164,92,.2);border-bottom:1px solid rgba(224,164,92,.2)}
+.mq .tr{display:flex;width:max-content;animation:mqMove 28s linear infinite}
+.mq:hover .tr{animation-play-state:paused}
+.mq span{display:flex;align-items:center;white-space:nowrap;font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:.05em;padding:13px 0}
+.mq em{color:var(--sonne);font-style:normal;margin:0 18px}
+@keyframes mqMove{to{transform:translateX(-50%)}}
+
+section{padding:clamp(56px,8vw,104px) 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.sec-num{font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--blatt);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(28px,4.4vw,46px);margin-bottom:12px}
+.sec-head .sub{color:var(--ink-soft)}
+
+/* ---------- Leistungen ---------- */
+.leist .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.leist .grid{grid-template-columns:1fr}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;overflow:clip;transition:transform .45s var(--ease),box-shadow .45s}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 48px -30px rgba(25,50,58,.4)}
+.card::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,var(--blatt),var(--sonne));transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease)}
+.card:hover::after{transform:scaleX(1)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 42%,rgba(224,164,92,.16) 50%,transparent 58%);transform:translateX(-130%);transition:transform 1s var(--ease);pointer-events:none}
+.card:hover::before{transform:translateX(130%)}
+.card .ic{width:46px;height:46px;color:var(--blatt);margin-bottom:16px}
+.card .ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:14.5px}
+.card .tag{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blatt)}
+
+/* ---------- Zahlen ---------- */
+.zahlen{background:var(--creme);text-align:center;padding-top:0}
+.zahlen .row{display:flex;justify-content:center;gap:clamp(30px,7vw,70px);flex-wrap:wrap}
+.zahlen .big{font-family:var(--serif);font-size:clamp(40px,7vw,64px);color:var(--blatt);line-height:1}
+.zahlen .big .st{color:var(--sonne)}
+.zahlen .lbl{color:var(--ink-soft);margin-top:6px}
+
+/* ---------- Anspruch ---------- */
+.fleurop{background:var(--grün);color:var(--creme);text-align:center}
+.fleurop h2{font-size:clamp(26px,3.8vw,40px);margin-bottom:12px}
+.fleurop p{color:rgba(246,248,248,.75);max-width:560px;margin:0 auto}
+.fleurop .fbadge{display:inline-block;margin-top:22px;border:1px solid rgba(224,164,92,.45);border-radius:12px;padding:15px 28px;color:#f3ddc2;font-size:14.5px;line-height:1.6}
+
+/* ---------- Zeiten ---------- */
+.zeiten{background:var(--creme-2)}
+.zeiten .inner{max-width:660px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(26px,5vw,44px);box-shadow:0 30px 60px -40px rgba(25,50,58,.35)}
+.zrow{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:13px 4px;border-bottom:1px dashed var(--line);font-size:clamp(15px,2.4vw,17px)}
+.zrow:last-of-type{border-bottom:0}
+.zrow .d{font-weight:600}
+.zrow .h{color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.zrow.today{background:linear-gradient(90deg,rgba(91,150,165,.12),transparent);border-radius:10px;padding-left:12px;padding-right:12px}
+.zrow.today .d::after{content:"· Heute";color:var(--blatt);font-size:12px;margin-left:8px}
+.zeiten .note{text-align:center;color:var(--ink-soft);font-size:13.5px;margin-top:18px}
+
+/* ---------- Karte & Kontakt ---------- */
+.kontakt{background:var(--grün);color:var(--creme)}
+.kontakt .kgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,44px);align-items:center}
+@media(max-width:840px){.kontakt .kgrid{grid-template-columns:1fr}}
+.kontakt h2{font-size:clamp(27px,4.2vw,44px);margin-bottom:12px}
+.kontakt p{color:rgba(246,248,248,.72)}
+.kontakt .adr{font-family:var(--serif);font-size:clamp(18px,2.6vw,23px);color:#f3ddc2;margin:18px 0 24px}
+.map{position:relative;height:380px;border-radius:20px;overflow:clip;border:1px solid rgba(224,164,92,.35);background:var(--grün-2)}
+@media(max-width:840px){.map{height:320px}}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.15) contrast(1.03)}
+.map-pre{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:24px;background:radial-gradient(70% 60% at 50% 40%,rgba(224,164,92,.14),transparent 70%)}
+.map-pre .pin{width:52px;height:52px;color:var(--sonne);animation:pinDrop 2.6s ease-in-out infinite}
+.map-pre .pin svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pinDrop{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.map-pre b{font-family:var(--serif);font-size:20px}
+.map-pre span{color:rgba(246,248,248,.65);font-size:14px}
+.map-pre button{margin-top:12px;cursor:pointer;font:inherit;border:0;background:var(--sonne);color:var(--grün);font-weight:700;border-radius:999px;padding:13px 26px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:.3s}
+.map-pre button:hover{background:#ecb878}
+.map-pre small{color:rgba(246,248,248,.4);font-size:11px;margin-top:8px}
+
+footer{background:#101f25;color:rgba(246,248,248,.5);padding:24px 0;font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{border-bottom:1px dotted rgba(246,248,248,.3)}
+.demo-badge{position:fixed;left:12px;bottom:74px;z-index:60;background:rgba(22,50,59,.92);color:#f3ddc2;border:1px solid rgba(224,164,92,.35);border-radius:8px;padding:7px 12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+@media(min-width:750px){.demo-badge{bottom:14px}}
+
+.satc{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;background:rgba(22,50,59,.96);backdrop-filter:blur(8px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;align-items:center}
+.satc span{flex:1;color:rgba(246,248,248,.85);font-size:13px}
+.satc a{background:var(--sonne);color:var(--grün);border-radius:9px;padding:12px 20px;font-weight:700;font-size:13px;white-space:nowrap}
+@media(max-width:749px){.satc{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="prog" aria-hidden="true"></div>
+<div class="demo-badge">Design-Entwurf · Demo</div>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="#top"><b>Praxis Salomon</b><span>Physiotherapie · Osteopathie</span></a>
+    <a class="tel" href="tel:039492517">✆ 03949 2517</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Willkommen">
+  <div class="petal p1" aria-hidden="true"></div><div class="petal p2" aria-hidden="true"></div>
+  <div class="petal p3" aria-hidden="true"></div><div class="petal p4" aria-hidden="true"></div>
+  <div class="petal p5" aria-hidden="true"></div>
+  <div>
+    <p class="kicker hin">Physiotherapie in Oschersleben</p>
+    <h1 class="hin h2">Damit Bewegung<br>wieder <em>leicht</em> fällt.</h1>
+    <p class="lede hin h3">Physiotherapie und Osteopathie in ruhiger Atmosphäre — mitten in Oschersleben an der Breitscheidstraße.</p>
+    <span class="stars hin h4">Praxis Edeltraud Salomon · Breitscheidstraße 51</span>
+    <div class="cta-row hin h5">
+      <a class="btn g" href="tel:039492517">Termin vereinbaren</a>
+      <a class="btn ghost" href="#zeiten">Sprechzeiten</a>
+    </div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="tr">
+  <span>Physiotherapie <em>·</em> Osteopathie <em>·</em> Krankengymnastik <em>·</em> Manuelle Therapie <em>·</em> Massage <em>·</em>&nbsp;</span>
+  <span>Physiotherapie <em>·</em> Osteopathie <em>·</em> Krankengymnastik <em>·</em> Manuelle Therapie <em>·</em> Massage <em>·</em>&nbsp;</span>
+</div></div>
+
+<section class="leist" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">01 · Unsere Praxis</span>
+      <h2>Behandlung mit Zeit</h2>
+      <p class="sub">Wir nehmen uns Zeit für Sie — und behandeln nicht nur das Symptom, sondern schauen auf den ganzen Menschen.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M24 42 C14 34 8 27 8 20 a8 8 0 0 1 16 -3 a8 8 0 0 1 16 3 c0 7 -6 14 -16 22 z"/></svg></div>
+        <h3>Physiotherapie</h3>
+        <p>Krankengymnastik, manuelle Therapie und Massage — nach Verordnung Ihrer Ärztin oder Ihres Arztes.</p>
+        <span class="tag">Krankengymnastik · Manuelle Therapie</span>
+      </div>
+      <div class="card rv d2">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M16 10 c0 6 4 8 4 14 c0 5 -4 7 -4 12"/><path d="M28 8 c0 7 4 9 4 15 c0 6 -4 8 -4 13"/><path d="M10 40 h28"/></svg></div>
+        <h3>Osteopathie</h3>
+        <p>Mit den Händen dort ansetzen, wo die Ursache liegt — ganzheitlich und ohne Hektik.</p>
+        <span class="tag">Ganzheitlich · Mit den Händen</span>
+      </div>
+      <div class="card rv d3">
+        <div class="ic"><svg viewBox="0 0 48 48"><circle cx="24" cy="12" r="5"/><path d="M24 17 v14 M24 22 l-9 6 M24 22 l9 6 M24 31 l-6 11 M24 31 l6 11"/></svg></div>
+        <h3>Beratung &amp; Übungen</h3>
+        <p>Sie bekommen Übungen für zu Hause mit — damit der Erfolg auch nach der Behandlung bleibt.</p>
+        <span class="tag">Anleitung · Übungen für zu Hause</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zahlen">
+  <div class="wrap">
+    <div class="row">
+      <div class="rv"><div class="big">Zeit</div><div class="lbl">für jede Patientin, jeden Patienten</div></div>
+      <div class="rv d2"><div class="big">Erfahren</div><div class="lbl">Physiotherapie und Osteopathie</div></div>
+      <div class="rv d3"><div class="big">Zentral</div><div class="lbl">Breitscheidstraße, Oschersleben</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="fleurop">
+  <div class="wrap">
+    <span class="sec-num" style="color:#b7cfd6">02 · Unser Anspruch</span>
+    <h2 class="rv">Zuhören kommt zuerst</h2>
+    <p class="rv d2">Bevor wir behandeln, hören wir zu. Woher kommen die Beschwerden, was haben Sie schon versucht, was wollen Sie wieder können. Daraus wird Ihre Behandlung.</p>
+    <span class="fbadge rv d3">Praxis für Physiotherapie &amp; Osteopathie · Oschersleben</span>
+  </div>
+</section>
+
+<section class="zeiten" id="zeiten">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">03 · Sprechzeiten</span>
+      <h2>Wann wir für Sie da sind</h2>
+    </div>
+    <div class="inner rv d2">
+      <div class="zrow" data-d="1"><span class="d">Montag</span><span class="h">07:00 – 18:00</span></div>
+      <div class="zrow" data-d="2"><span class="d">Dienstag</span><span class="h">07:00 – 18:00</span></div>
+      <div class="zrow" data-d="3"><span class="d">Mittwoch</span><span class="h">07:00 – 18:00</span></div>
+      <div class="zrow" data-d="4"><span class="d">Donnerstag</span><span class="h">07:00 – 16:00</span></div>
+      <div class="zrow" data-d="5"><span class="d">Freitag</span><span class="h">07:00 – 12:00</span></div>
+      <div class="zrow" data-d="6"><span class="d">Samstag</span><span class="h">geschlossen</span></div>
+      <div class="zrow" data-d="0"><span class="d">Sonntag</span><span class="h">geschlossen</span></div>
+      <p class="note">Termine nach Vereinbarung — rufen Sie uns einfach an.</p>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="kgrid">
+      <div>
+        <span class="sec-num" style="color:#b7cfd6">04 · Kontakt</span>
+        <h2 class="rv">Vereinbaren Sie Ihren Termin</h2>
+        <p class="rv d2">Ein Anruf genügt. Wir finden gemeinsam einen Termin, der zu Ihnen passt.</p>
+        <p class="adr rv d2">Breitscheidstraße 51 · 39387 Oschersleben</p>
+        <div class="cta-row rv d3" style="justify-content:flex-start">
+          <a class="btn g" href="tel:039492517">✆ 03949 2517</a>
+        </div>
+      </div>
+      <div class="map rv d2" data-q="Breitscheidstra%C3%9Fe%2051%2C%2039387%20Oschersleben">
+        <div class="map-pre">
+          <div class="pin"><svg viewBox="0 0 48 48"><path d="M24 4 a14 14 0 0 1 14 14 c0 10 -14 26 -14 26 S10 28 10 18 A14 14 0 0 1 24 4 z"/><circle cx="24" cy="18" r="5"/></svg></div>
+          <b>Breitscheidstraße 51</b>
+          <span>39387 Oschersleben</span>
+          <button type="button" onclick="ldMap(this)">Karte anzeigen</button>
+          <small>Beim Laden der Karte werden Daten an Google übertragen.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Praxis für Physiotherapie &amp; Osteopathie Edeltraud Salomon · Oschersleben</span>
+    <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a> <em style="opacity:.6">(werden beim Livegang eingerichtet)</em></span>
+  </div>
+</footer>
+
+<div class="satc" aria-hidden="true">
+  <span><b>Praxis Salomon</b> · Physiotherapie</span>
+  <a href="tel:039492517">Jetzt anrufen</a>
+</div>
+
+<script>
+(function(){
+  var d=String(new Date().getDay());
+  document.querySelectorAll('.zrow').forEach(function(r){if(r.dataset.d===d)r.classList.add('today');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  });},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  var bar=document.querySelector('.prog'),h=document.documentElement;
+  addEventListener('scroll',function(){bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+})();
+function ldMap(btn){
+  var m=btn.closest('.map');
+  m.innerHTML='<iframe title="Karte" src="https://www.google.com/maps?q='+m.dataset.q+'&hl=de&z=16&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>';
+}
+</script>
+</body>
+</html>
