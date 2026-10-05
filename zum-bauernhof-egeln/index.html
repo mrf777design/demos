@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="de">
+<head>
+<script>document.documentElement.className+=' js'</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2b2117">
+<title>„Zum Bauernhof" Pension &amp; Gaststätte · Egeln</title>
+<meta name="description" content="„Zum Bauernhof" Pension &amp; Gaststätte in Egeln — Pensionszimmer, Pilgerzimmer und Eventlokation „Zum Kuhstall". Breiteweg 37, Tel. 039268 604183.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --holz:#2b2117;--holz-2:#3c2e20;--feld:#8c6f4f;--creme:#f8f4ec;--creme-2:#f0e9dc;
+  --ink:#2e261c;--ink-soft:#6f6557;--stroh:#d9a441;--line:rgba(70,55,40,.14);
+  --serif:"Lora",Georgia,serif;--ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--holz)}
+body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--creme);color:var(--ink);line-height:1.7;font-size:16px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.16}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d2{transition-delay:.12s}.js .rv.d3{transition-delay:.24s}.js .rv.d4{transition-delay:.36s}
+@keyframes hin{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hin{animation:hin 1s var(--ease) both}
+.hin.h2{animation-delay:.14s}.hin.h3{animation-delay:.28s}.hin.h4{animation-delay:.42s}.hin.h5{animation-delay:.56s}
+@media(prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .hin,.halm,.korn,.mq .tr{animation:none!important}
+}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:80;background:linear-gradient(90deg,var(--feld),var(--stroh))}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(43,33,23,.93);backdrop-filter:blur(10px)}
+header .bar{max-width:1080px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{color:var(--creme)}
+.logo b{font-family:var(--serif);font-weight:600;font-size:18px}
+.logo span{display:block;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#cbb894}
+.tel{border:1px solid var(--stroh);border-radius:999px;padding:9px 18px;color:var(--stroh);font-size:13px;white-space:nowrap;transition:.3s}
+.tel:hover{background:var(--stroh);color:var(--holz)}
+
+.hero{position:relative;min-height:90svh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--creme);padding:120px 22px 80px;overflow:clip;background:
+  radial-gradient(120% 90% at 50% 110%,rgba(140,111,79,.5) 0%,rgba(43,33,23,0) 55%),
+  linear-gradient(175deg,#3a2c1e 0%,var(--holz) 60%,#1c150e 100%)}
+.halm{position:absolute;color:var(--feld);opacity:.5;animation:halmSway 7s ease-in-out infinite alternate}
+.halm svg{width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
+.halm.l1{width:46px;left:8%;top:22%}.halm.l2{width:34px;right:9%;top:32%;animation-delay:1.6s;rotate:24deg}
+.halm.l3{width:30px;left:16%;bottom:20%;animation-delay:3s;rotate:-18deg}
+@keyframes halmSway{from{translate:0 0;rotate:0deg}to{translate:6px -14px;rotate:6deg}}
+.korn{position:absolute;top:-30px;width:9px;height:9px;border-radius:60% 40% 60% 40%;background:rgba(230,200,150,.5);animation:kornFall linear infinite}
+.korn.p1{left:16%;animation-duration:11s}
+.korn.p2{left:34%;animation-duration:14s;animation-delay:3s;background:rgba(217,164,65,.4)}
+.korn.p3{left:58%;animation-duration:12s;animation-delay:6s}
+.korn.p4{left:78%;animation-duration:15s;animation-delay:1.5s;background:rgba(214,196,166,.4)}
+.korn.p5{left:90%;animation-duration:13s;animation-delay:8s}
+@keyframes kornFall{
+  0%{transform:translateY(-4vh) translateX(0) rotate(0deg);opacity:0}
+  8%{opacity:1}
+  100%{transform:translateY(96vh) translateX(-60px) rotate(340deg);opacity:0}
+}
+.hero .kicker{font-size:11.5px;letter-spacing:.4em;text-indent:.4em;text-transform:uppercase;color:#d6c5a0;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,7vw,66px);margin-bottom:16px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--stroh)}
+.hero p.lede{max-width:600px;margin:0 auto 24px;color:rgba(248,244,236,.82);font-size:17px}
+.stars{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(217,164,65,.4);border-radius:999px;padding:8px 18px;font-size:13px;color:#f2dfb6;margin-bottom:30px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:999px;font-size:13.5px;letter-spacing:.09em;text-transform:uppercase;transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s,box-shadow .3s}
+.btn:active{transform:scale(.97)}
+.btn.g{background:var(--stroh);color:var(--holz);font-weight:700;box-shadow:0 18px 36px -18px rgba(217,164,65,.6)}
+.btn.g:hover{background:#e6b455;transform:translateY(-2px)}
+.btn.ghost{border:1px solid rgba(248,244,236,.4);color:var(--creme)}
+.btn.ghost:hover{border-color:var(--stroh);color:var(--stroh)}
+
+.mq{background:var(--holz);color:rgba(248,244,236,.75);overflow:clip;border-top:1px solid rgba(217,164,65,.2);border-bottom:1px solid rgba(217,164,65,.2)}
+.mq .tr{display:flex;width:max-content;animation:mqMove 28s linear infinite}
+.mq:hover .tr{animation-play-state:paused}
+.mq span{display:flex;align-items:center;white-space:nowrap;font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:.05em;padding:13px 0}
+.mq em{color:var(--stroh);font-style:normal;margin:0 18px}
+@keyframes mqMove{to{transform:translateX(-50%)}}
+
+section{padding:clamp(56px,8vw,104px) 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.sec-num{font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--feld);display:block;margin-bottom:10px}
+.sec-head h2{font-size:clamp(28px,4.4vw,46px);margin-bottom:12px}
+.sec-head .sub{color:var(--ink-soft)}
+
+.leist .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.leist .grid{grid-template-columns:1fr}}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;overflow:clip;transition:transform .45s var(--ease),box-shadow .45s}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 48px -30px rgba(60,45,30,.4)}
+.card::after{content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,var(--feld),var(--stroh));transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease)}
+.card:hover::after{transform:scaleX(1)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 42%,rgba(217,164,65,.16) 50%,transparent 58%);transform:translateX(-130%);transition:transform 1s var(--ease);pointer-events:none}
+.card:hover::before{transform:translateX(130%)}
+.card .ic{width:46px;height:46px;color:var(--feld);margin-bottom:16px}
+.card .ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:14.5px}
+.card .tag{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--feld)}
+
+.zahlen{background:var(--creme);text-align:center;padding-top:0}
+.zahlen .row{display:flex;justify-content:center;gap:clamp(30px,7vw,70px);flex-wrap:wrap}
+.zahlen .big{font-family:var(--serif);font-size:clamp(44px,8vw,72px);color:var(--feld);line-height:1}
+.zahlen .lbl{color:var(--ink-soft);margin-top:6px}
+
+.chronik{background:var(--holz);color:var(--creme);text-align:center}
+.chronik h2{font-size:clamp(26px,3.8vw,40px);margin-bottom:12px}
+.chronik p{color:rgba(248,244,236,.75);max-width:620px;margin:0 auto}
+.chronik .fbadge{display:inline-block;margin-top:22px;border:1px solid rgba(217,164,65,.45);border-radius:12px;padding:15px 28px;color:#f2dfb6;font-size:14.5px;line-height:1.6}
+
+.lage{background:var(--creme-2)}
+.lage .inner{max-width:660px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(26px,5vw,44px);box-shadow:0 30px 60px -40px rgba(60,45,30,.35)}
+.zrow{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:13px 4px;border-bottom:1px dashed var(--line);font-size:clamp(15px,2.4vw,17px)}
+.zrow:last-of-type{border-bottom:0}
+.zrow .d{font-weight:600}
+.zrow .h{color:var(--ink-soft);text-align:right}
+.lage .note{text-align:center;color:var(--ink-soft);font-size:13.5px;margin-top:18px}
+
+.kontakt{background:var(--holz);color:var(--creme)}
+.kontakt .kgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,44px);align-items:center}
+@media(max-width:840px){.kontakt .kgrid{grid-template-columns:1fr}}
+.kontakt h2{font-size:clamp(27px,4.2vw,44px);margin-bottom:12px}
+.kontakt p{color:rgba(248,244,236,.72)}
+.kontakt .adr{font-family:var(--serif);font-size:clamp(18px,2.6vw,23px);color:#f2dfb6;margin:18px 0 24px}
+.map{position:relative;height:380px;border-radius:20px;overflow:clip;border:1px solid rgba(217,164,65,.35);background:var(--holz-2)}
+@media(max-width:840px){.map{height:320px}}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.15) contrast(1.03)}
+.map-pre{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:24px;background:radial-gradient(70% 60% at 50% 40%,rgba(217,164,65,.14),transparent 70%)}
+.map-pre .pin{width:52px;height:52px;color:var(--stroh);animation:pinDrop 2.6s ease-in-out infinite}
+.map-pre .pin svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pinDrop{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.map-pre b{font-family:var(--serif);font-size:20px}
+.map-pre span{color:rgba(248,244,236,.65);font-size:14px}
+.map-pre button{margin-top:12px;cursor:pointer;font:inherit;border:0;background:var(--stroh);color:var(--holz);font-weight:700;border-radius:999px;padding:13px 26px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:.3s}
+.map-pre button:hover{background:#e6b455}
+.map-pre small{color:rgba(248,244,236,.4);font-size:11px;margin-top:8px}
+
+footer{background:#191209;color:rgba(248,244,236,.5);padding:24px 0;font-size:12.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{border-bottom:1px dotted rgba(248,244,236,.3)}
+.demo-badge{position:fixed;left:12px;bottom:74px;z-index:60;background:rgba(43,33,23,.92);color:#f2dfb6;border:1px solid rgba(217,164,65,.35);border-radius:8px;padding:7px 12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+@media(min-width:750px){.demo-badge{bottom:14px}}
+
+.satc{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;background:rgba(43,33,23,.96);backdrop-filter:blur(8px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;align-items:center}
+.satc span{flex:1;color:rgba(248,244,236,.85);font-size:13px}
+.satc a{background:var(--stroh);color:var(--holz);border-radius:9px;padding:12px 20px;font-weight:700;font-size:13px;white-space:nowrap}
+@media(max-width:749px){.satc{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="prog" aria-hidden="true"></div>
+<div class="demo-badge">Design-Entwurf · Demo</div>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="#top"><b>„Zum Bauernhof"</b><span>Pension &amp; Gaststätte · Egeln</span></a>
+    <a class="tel" href="tel:039268604183">✆ 039268 604183</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Willkommen">
+  <div class="korn p1" aria-hidden="true"></div><div class="korn p2" aria-hidden="true"></div>
+  <div class="korn p3" aria-hidden="true"></div><div class="korn p4" aria-hidden="true"></div>
+  <div class="korn p5" aria-hidden="true"></div>
+  <div class="halm l1" aria-hidden="true"><svg viewBox="0 0 46 60"><path d="M23 4 C10 18 6 32 10 50 c9 5 17 5 26 0 C40 32 36 18 23 4 z"/><path d="M23 12 c-1 14 -2 24 -4 36" opacity=".6"/></svg></div>
+  <div class="halm l2" aria-hidden="true"><svg viewBox="0 0 46 60"><path d="M23 4 C10 18 6 32 10 50 c9 5 17 5 26 0 C40 32 36 18 23 4 z"/><path d="M23 12 c-1 14 -2 24 -4 36" opacity=".6"/></svg></div>
+  <div class="halm l3" aria-hidden="true"><svg viewBox="0 0 46 60"><path d="M23 4 C10 18 6 32 10 50 c9 5 17 5 26 0 C40 32 36 18 23 4 z"/><path d="M23 12 c-1 14 -2 24 -4 36" opacity=".6"/></svg></div>
+  <div>
+    <p class="kicker hin">Seit 1825 im Familienbesitz</p>
+    <h1 class="hin h2">Feiern &amp; übernachten<br>wie <em>auf dem Land</em>.</h1>
+    <p class="lede hin h3">Pension, Pilgerzimmer und die rustikale Eventlokation „Zum Kuhstall" — mitten im Ortskern von Egeln, nahe Marktplatz und Wasserburg.</p>
+    <span class="stars hin h4">Breiteweg 37 · 39435 Egeln</span>
+    <div class="cta-row hin h5">
+      <a class="btn g" href="tel:039268604183">Jetzt anrufen &amp; anfragen</a>
+      <a class="btn ghost" href="#angebot">Unser Haus</a>
+    </div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="tr">
+  <span>Pension <em>❖</em> Pilgerzimmer <em>❖</em> Eventlokation „Zum Kuhstall" <em>❖</em> Familienfeiern <em>❖</em> Hausgemachtes Buffet <em>❖</em> Billardcafé <em>❖</em>&nbsp;</span>
+  <span>Pension <em>❖</em> Pilgerzimmer <em>❖</em> Eventlokation „Zum Kuhstall" <em>❖</em> Familienfeiern <em>❖</em> Hausgemachtes Buffet <em>❖</em> Billardcafé <em>❖</em>&nbsp;</span>
+</div></div>
+
+<section class="leist" id="angebot">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">01 · Unser Haus</span>
+      <h2>Ein Hof — drei gute Gründe</h2>
+      <p class="sub">Übernachten, feiern oder auf dem Jakobsweg rasten: Auf unserem Anwesen findet jeder seinen Platz.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M8 40 V20 L24 8 L40 20 V40"/><path d="M8 40 h32"/><path d="M19 40 V28 h10 v12"/></svg></div>
+        <h3>Pension</h3>
+        <p>Gemütlich eingerichtete Zimmer im Ortskern von Egeln — mit kurzen Wegen zum Marktplatz und zur Egelner Wasserburg.</p>
+        <span class="tag">Übernachtung · Monteure · Gäste</span>
+      </div>
+      <div class="card rv d2">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M10 40 h28"/><path d="M12 40 V24 h24 v16"/><path d="M8 24 h32 M16 24 v-6 h16 v6"/><circle cx="24" cy="32" r="3"/></svg></div>
+        <h3>Eventlokation „Zum Kuhstall"</h3>
+        <p>Saal mit bis zu 60 Plätzen plus Anbau mit großer Tafel für 22 Gäste. Hausgemachtes Buffet, angerichtet im Rübenkeller mit originalem Brunnen.</p>
+        <span class="tag">Hochzeit · Jubiläum · Taufe</span>
+      </div>
+      <div class="card rv d3">
+        <div class="ic"><svg viewBox="0 0 48 48"><path d="M24 6 v24"/><path d="M24 10 c6 -3 10 -3 14 0 v14 c-4 -3 -8 -3 -14 0 z"/><path d="M14 42 h20 M18 42 v-8 h12 v8"/></svg></div>
+        <h3>Pilgerzimmer &amp; Billardcafé</h3>
+        <p>Als Pilger auf dem Jakobsweg herzlich willkommen — zu Fuß oder mit dem Rad. Im Billardcafé auf dem Hof gibt es dazu eine kleine Stärkung.</p>
+        <span class="tag">Jakobsweg · Radler · Freizeit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zahlen">
+  <div class="wrap">
+    <div class="row">
+      <div class="rv"><div class="big">1825</div><div class="lbl">seit damals im Familienbesitz</div></div>
+      <div class="rv d2"><div class="big">60+22</div><div class="lbl">Plätze in Saal und Anbau</div></div>
+      <div class="rv d3"><div class="big">20 km</div><div class="lbl">bis Magdeburg · 30 Min. bis in den Harz</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chronik">
+  <div class="wrap">
+    <span class="sec-num" style="color:#d6c5a0">02 · Geschichte</span>
+    <h2 class="rv">Vom Brauhaus zum Gasthof</h2>
+    <p class="rv d2">Ursprünglich waren hier eine Brauerei mit Gaststätte und die Kegelbahn „Zum schwarzen Adler" ansässig — gebraut wurde das beliebte Egelei Bier. Nach der Wende, im Jahr 1990, wurde der landwirtschaftliche Hof mit viel Engagement zur gastronomischen Einrichtung mit Pension umgebaut.</p>
+    <span class="fbadge rv d3">❖ Familie Schröder heißt Sie herzlich willkommen</span>
+  </div>
+</section>
+
+<section class="lage" id="lage">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">03 · Lage &amp; Umgebung</span>
+      <h2>Mitten in der Börde</h2>
+    </div>
+    <div class="inner rv d2">
+      <div class="zrow"><span class="d">Marktplatz Egeln</span><span class="h">wenige Gehminuten</span></div>
+      <div class="zrow"><span class="d">Egelner Wasserburg</span><span class="h">wenige Gehminuten</span></div>
+      <div class="zrow"><span class="d">Magdeburg</span><span class="h">ca. 20 km</span></div>
+      <div class="zrow"><span class="d">Motorsportarena Oschersleben</span><span class="h">ca. 15 Min. mit dem Auto</span></div>
+      <div class="zrow"><span class="d">Naturschutzgebiet Harz</span><span class="h">ca. 30 Min. mit dem Auto</span></div>
+      <p class="note">Anfragen und Reservierungen nehmen wir gern telefonisch entgegen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="kgrid">
+      <div>
+        <span class="sec-num" style="color:#d6c5a0">04 · Kontakt</span>
+        <h2 class="rv">Rufen Sie uns an — wir planen mit Ihnen</h2>
+        <p class="rv d2">Ob Übernachtung, Familienfeier oder Pilgerrast: Am Telefon besprechen wir alles persönlich.</p>
+        <p class="adr rv d2">Breiteweg 37 · 39435 Egeln</p>
+        <div class="cta-row rv d3" style="justify-content:flex-start">
+          <a class="btn g" href="tel:039268604183">✆ 039268 604183</a>
+        </div>
+      </div>
+      <div class="map rv d2" data-q="Breiteweg%2037%2C%2039435%20Egeln">
+        <div class="map-pre">
+          <div class="pin"><svg viewBox="0 0 48 48"><path d="M24 4 a14 14 0 0 1 14 14 c0 10 -14 26 -14 26 S10 28 10 18 A14 14 0 0 1 24 4 z"/><circle cx="24" cy="18" r="5"/></svg></div>
+          <b>Breiteweg 37</b>
+          <span>39435 Egeln</span>
+          <button type="button" onclick="ldMap(this)">Karte anzeigen</button>
+          <small>Beim Laden der Karte werden Daten an Google übertragen.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 „Zum Bauernhof" Pension &amp; Gaststätte · Egeln</span>
+    <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a> <em style="opacity:.6">(werden beim Livegang eingerichtet)</em></span>
+  </div>
+</footer>
+
+<div class="satc" aria-hidden="true">
+  <span><b>„Zum Bauernhof"</b> · Pension &amp; Gaststätte Egeln</span>
+  <a href="tel:039268604183">Jetzt anrufen</a>
+</div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  });},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  var bar=document.querySelector('.prog'),h=document.documentElement;
+  addEventListener('scroll',function(){bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+})();
+function ldMap(btn){
+  var m=btn.closest('.map');
+  m.innerHTML='<iframe title="Karte" src="https://www.google.com/maps?q='+m.dataset.q+'&hl=de&z=16&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>';
+}
+</script>
+</body>
+</html>
